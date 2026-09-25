@@ -5,37 +5,11 @@ Facultad de Ingeniería en Sistemas y Computación
 Lic. en Ingeniería de Sistemas Computacionales
 
 </div>
-
----
-
-# Proyecto Producto - CRUD de Productos
-
-**Autor:** Leonel Mendoza (1IL133)  
-**Repositorio:** [Laboratorio-Bases-de-Datos-C-](https://github.com/LeonelMendoza2309/Laboratorio-Bases-de-Datos-C-)
-
-Aplicación de escritorio desarrollada en C# con Windows Forms para administrar productos mediante operaciones CRUD (*Create, Read, Update, Delete*) y una base de datos MySQL.
-
----
-
-## Tabla de Contenidos
-
-- [Descripción del proyecto](#descripción-del-proyecto)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Requisitos](#requisitos)
-- [Configuración de la base de datos](#configuración-de-la-base-de-datos)
-- [Instalación y ejecución](#instalación-y-ejecución)
-- [Uso de la aplicación](#uso-de-la-aplicación)
-- [Problemas y soluciones](#problemas-y-soluciones)
-- [Resultados](#resultados)
-- [Conclusiones](#conclusiones)
-
 ---
 
 ## Descripción del proyecto
 
-**ProyectoProducto** es una aplicación CRUD que permite gestionar un inventario de productos desde una interfaz gráfica. Cada producto contiene los siguientes datos:
+Esta es una aplicación CRUD que permite gestionar un inventario de productos desde una interfaz gráfica. Cada producto contiene los siguientes datos:
 
 - ID
 - Nombre
@@ -43,16 +17,16 @@ Aplicación de escritorio desarrollada en C# con Windows Forms para administrar 
 - Cantidad
 - Imagen
 
-La aplicación almacena la información en una base de datos MySQL y muestra los registros en un control `DataGridView`. También permite filtrar productos en tiempo real y guardar imágenes en formato binario (`byte[]`).
+La aplicación almacena la información en una base de datos MySQL y muestra los registros en un control `DataGridView`.
 
 ---
 
 ## Estructura del proyecto
 
+Algunas de las carpetas como la Bin entre otras fueron removidas para poder cumplir con la limitacion de MB en el repositorio.
 ```text
 Laboratorio-Bases-de-Datos-C-/
 ├── ProyectoProducto/
-│   └── ProyectoProducto/
 │       ├── App.config                 # Configuración de .NET y redirecciones de ensamblados
 │       ├── Form1.cs                   # Lógica principal de la interfaz gráfica
 │       ├── Form1.Designer.cs          # Controles generados por el diseñador de Windows Forms
@@ -67,10 +41,9 @@ Laboratorio-Bases-de-Datos-C-/
 
 ### Componentes principales
 
-- **`Productos.cs`**: define el modelo con las propiedades `ID`, `Nombre`, `Precio`, `Cantidad` e `Imagen`.
-- **`Form1.cs`**: administra la interfaz, la carga de productos, la búsqueda, la selección de imágenes y las acciones CRUD.
-- **`conexionDB.cs`**: encapsula la conexión a MySQL y las operaciones de consulta, inserción, actualización y eliminación.
-- **`Program.cs`**: inicia la aplicación mediante `Application.Run(new Form1())`.
+- **`Productos.cs`**: define el modelo con los elementos de `ID`, `Nombre`, `Precio`, `Cantidad` e `Imagen`.
+- **`Form1.cs`**: es la clase "Principal" por asi decirlo, donde estan los botones y sus funciones.
+- **`conexionDB.cs`**: contiene la conexión a MySQL y las operaciones de consulta, inserción, actualización y eliminación.
 
 ---
 
@@ -105,12 +78,11 @@ Laboratorio-Bases-de-Datos-C-/
 
 Para compilar y ejecutar el proyecto se necesita:
 
-- Windows 10 o superior.
-- Visual Studio 2019, 2022 o una versión compatible con proyectos de .NET Framework.
+- Windows 10 en adelante.
+- Visual Studio, en si una versión compatible con proyectos de .NET Framework.
 - .NET Framework 4.7.2.
 - MySQL Server ejecutándose localmente.
-- MySQL Workbench, phpMyAdmin u otra herramienta para crear la base de datos.
-- Git para clonar el repositorio.
+- MySQL Workbench, u otra herramienta para crear la base de datos.
 
 ---
 
@@ -149,7 +121,7 @@ server=localhost;port=3306;database=ProdDB;user id=USUARIO;password=CONTRASEÑA;
 
 ## Instalación y ejecución
 
-### Clonar el repositorio
+### Primero debe clonar el repositorio
 
 ```bash
 git clone https://github.com/LeonelMendoza2309/Laboratorio-Bases-de-Datos-C-.git
@@ -160,11 +132,11 @@ cd Laboratorio-Bases-de-Datos-C-
 
 1. Iniciar Visual Studio.
 2. Abrir la solución o el archivo `ProyectoProducto/ProyectoProducto/ProyectoProducto.csproj`.
-3. Restaurar los paquetes NuGet si Visual Studio lo solicita.
+3. Restaurar los paquetes NuGet si Visual Studio.
 4. Confirmar que MySQL Server esté iniciado.
 5. Verificar la cadena de conexión en `conexionDB.cs`.
 6. Establecer `ProyectoProducto` como proyecto de inicio.
-7. Ejecutar con **F5** o **Ctrl + F5**.
+7. Ejecutar.
 
 El ejecutable generado se encontrará, según la configuración seleccionada, en una de las siguientes carpetas:
 
@@ -191,17 +163,14 @@ ProyectoProducto/ProyectoProducto/bin/Release/
 
 | # | Problema | Solución |
 |---:|---|---|
-| 1 | La aplicación no se conecta a MySQL | Verificar que el servidor esté activo, que `ProdDB` exista y que las credenciales sean correctas. |
+| 1 | La aplicación no se conecta a MySQL | Verificar que el servidor esté activo, que `ProdDB` exista y que la contraseña fuera correcta. |
 | 2 | No se muestran productos | Confirmar que la tabla `productos` tenga la estructura indicada y que la consulta tenga registros. |
 | 3 | Las imágenes no se visualizan | Comprobar que el archivo seleccionado sea válido y que la columna `imagen` sea de tipo `LONGBLOB`. |
 | 4 | Error al restaurar dependencias | Restaurar los paquetes NuGet desde Visual Studio y comprobar la referencia a `MySql.Data`. |
-| 5 | Error al convertir precio o cantidad | Introducir un precio numérico y una cantidad entera usando el formato esperado por la configuración regional. |
 
 ---
 
 ## Resultados
-
-El proyecto implementa una aplicación funcional para la administración de productos con:
 
 - Persistencia de datos en MySQL.
 - Operaciones CRUD.
@@ -217,11 +186,6 @@ El proyecto implementa una aplicación funcional para la administración de prod
 - Se aplicaron conceptos de programación orientada a objetos mediante un modelo de productos.
 - Se implementó la comunicación entre una aplicación C# y una base de datos MySQL.
 - Se comprendió el funcionamiento de las operaciones CRUD.
-- Windows Forms permitió construir una interfaz sencilla para gestionar información.
-- El uso de consultas parametrizadas ayuda a proteger las operaciones de la base de datos.
 - El almacenamiento de imágenes como datos binarios permite asociar recursos visuales a los productos.
 
 ---
-
-**Última actualización:** 25/09/2026  
-**Estado:** Completado
