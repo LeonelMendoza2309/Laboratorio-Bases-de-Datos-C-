@@ -195,6 +195,9 @@ ProyectoProducto/ProyectoProducto/bin/Release/
 ## Eliminación
 <img width="675" height="580" alt="image" src="https://github.com/user-attachments/assets/03746e6b-9144-46e6-82ff-0b66f9c1f18c" />
 
+## Base de Datos del programa:
+<img width="918" height="531" alt="image" src="https://github.com/user-attachments/assets/a653e334-4abb-45e6-b497-e746db6c1430" />
+
 ---
 
 ## Conclusiones
