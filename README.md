@@ -179,6 +179,22 @@ ProyectoProducto/ProyectoProducto/bin/Release/
 - Interfaz gráfica de escritorio mediante Windows Forms.
 - Separación básica entre la interfaz, el modelo `Productos` y la capa de acceso a datos `conexionDB`.
 
+##Imagenes de prueba:
+<img width="673" height="580" alt="image" src="https://github.com/user-attachments/assets/e88eb3c4-bdb3-4173-bffc-3755f79b06f6" />
+
+##Adición de productos
+<img width="676" height="582" alt="image" src="https://github.com/user-attachments/assets/c1b6ffc5-fa25-41f4-ae1b-7a64fd4783eb" />
+
+<img width="673" height="578" alt="image" src="https://github.com/user-attachments/assets/1a056c2f-e37a-48d2-930e-43e7f2975ad6" />
+
+##modificación
+<img width="669" height="576" alt="image" src="https://github.com/user-attachments/assets/7a642933-c767-481f-8fe1-8a66f7ab6e6a" />
+
+<img width="668" height="553" alt="image" src="https://github.com/user-attachments/assets/296f504a-b37b-4e7f-a426-e369510e6869" />
+
+##Eliminacion
+<img width="675" height="580" alt="image" src="https://github.com/user-attachments/assets/03746e6b-9144-46e6-82ff-0b66f9c1f18c" />
+
 ---
 
 ## Conclusiones
